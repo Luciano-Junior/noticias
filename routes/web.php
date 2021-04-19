@@ -18,3 +18,4 @@ Route::get('/', 'NoticiaController@home')->name('home');
 Route::get('/cadastrar', 'NoticiaController@create')->name('cadastrar');
 Route::post('/cadastrar', 'NoticiaController@store')->name('salvar');
 Route::get('/noticia/{id}', 'NoticiaController@show')->name('noticia');
+Route::post('/noticias', 'NoticiaController@search')->name('pesquisar');

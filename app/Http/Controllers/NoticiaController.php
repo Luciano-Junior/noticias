@@ -36,4 +36,12 @@ class NoticiaController extends Controller
         $noticia = Noticia::where('id',$id)->first();
         return view('noticias.noticia', compact('noticia'));
     }
+
+    public function search(Request $request){
+        $noticias = Noticia::where('categoria','like','%'.$request->pesquisa.'%')->get();
+        if(count($noticias) == 0){
+            $noticias = Noticia::where('titulo','like','%'.$request->pesquisa.'%')->get();
+        }
+        dd($noticias);
+    }
 }
