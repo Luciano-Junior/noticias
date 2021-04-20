@@ -36,8 +36,8 @@
                     <li>
                         <span class="main_header_content_menu_mobile_obj icon-menu icon-notext"></span>
                         <ul class="main_header_content_menu_mobile_sub ds_none" id="main_header_content_menu_mobile_sub">
-                            <li><a href="#">CADASTRAR NOTÍCIAS</a></li>
-                            <li><a href="#">EXIBIR NOTICIAS</a></li>
+                            <li><a href="{{route('cadastrar')}}">CADASTRAR NOTÍCIAS</a></li>
+                            <li><a href="{{route('home')}}">EXIBIR NOTICIAS</a></li>
                             <li>
                                 <form action="{{route('pesquisar')}}" class="form" method="POST">
                                     @csrf
