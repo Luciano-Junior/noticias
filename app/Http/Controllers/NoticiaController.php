@@ -42,6 +42,6 @@ class NoticiaController extends Controller
         if(count($noticias) == 0){
             $noticias = Noticia::where('titulo','like','%'.$request->pesquisa.'%')->get();
         }
-        dd($noticias);
+        return view('noticias.pesquisa', compact('noticias'));
     }
 }

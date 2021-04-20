@@ -19,6 +19,11 @@ main{
     display: none !important;
 }
 
+.text-center{
+    flex-basis: 100%;
+    text-align: center;
+}
+
 /* HEADER */
 .main_header{
     width: 100%;
