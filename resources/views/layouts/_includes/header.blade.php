@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Notícias</title>
+    <link rel="stylesheet" href="../icon/fonticon.css">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
     <header class="main_header">
@@ -32,12 +35,13 @@
                 <ul>
                     <li>
                         <span class="main_header_content_menu_mobile_obj icon-menu icon-notext"></span>
-                        <ul class="main_header_content_menu_mobile_sub ds_none">
+                        <ul class="main_header_content_menu_mobile_sub ds_none" id="main_header_content_menu_mobile_sub">
                             <li><a href="#">CADASTRAR NOTÍCIAS</a></li>
                             <li><a href="#">EXIBIR NOTICIAS</a></li>
                             <li>
-                                <form action="" class="form">
-                                    <input type="search" name="" id="search" placeholder="Buscar">
+                                <form action="{{route('pesquisar')}}" class="form" method="POST">
+                                    @csrf
+                                    <input type="search" name="pesquisa" id="search" placeholder="Buscar">
                                 </form>
                             </li>
                         </ul>
