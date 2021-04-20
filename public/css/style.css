@@ -350,7 +350,11 @@ main{
         border-radius: 10px;
     }
     .form-box button{
-        
+        background-color: #d36833;
+            color: #fff;
+            border-radius: 15px;
+            cursor: pointer;
+            padding: 10px 20px;
     }
     
     /*******************************
